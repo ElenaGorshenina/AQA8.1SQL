@@ -2,7 +2,7 @@ package page;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import data.DataHelper;
+import data.SQLUtils;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -16,10 +16,9 @@ public class AuthPage {
         headingH2.shouldBe(Condition.visible);
     }
 
-    public VerificationPage validLogin() {
-        //      TODO DataHelper.login
-//        login.setValue();
-//        password.setValue();
+    public VerificationPage validLogin(SQLUtils.AuthLogin getLogin, SQLUtils.AuthPassword getPassword) {
+        login.setValue(getLogin.getLogin());
+        password.setValue(getPassword.getPassword());
 
         button.click();
         return new VerificationPage();

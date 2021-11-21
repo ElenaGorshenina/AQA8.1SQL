@@ -2,8 +2,7 @@ package page;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import data.DataHelper;
-import data.DataSQL;
+import data.SQLUtils;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -15,8 +14,8 @@ public class VerificationPage {
         codeField.shouldBe(Condition.visible);
     }
 
-    public CardPage validVerify() {
-//      TODO  codeField.setValue(verificationCode.getCode());
+    public CardPage validVerify(SQLUtils.VerificationCode getVerificationCode) {
+        codeField.setValue(getVerificationCode.getCode());
         verifyButton.click();
         return new CardPage();
     }
