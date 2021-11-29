@@ -15,7 +15,7 @@ public class SQLUtils {
 
     private static Connection getConn() {
         try {
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "app", "9mREsvXDs9Gk89El");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "app", "9mREsvXDs9Gk89E1");
         } catch (SQLException e) {
             e.printStackTrace();
         }
