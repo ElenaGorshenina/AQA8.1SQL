@@ -16,7 +16,7 @@ public class AuthPage {
         headingH2.shouldBe(Condition.visible);
     }
 
-    public VerificationPage validLogin(SQLUtils.AuthLogin getLogin, SQLUtils.AuthPassword getPassword) {
+    public VerificationPage validLogin(SQLUtils.AuthInfo getLogin, SQLUtils.AuthInfo getPassword) {
         login.setValue(getLogin.getLogin());
         password.setValue(getPassword.getPassword());
 
