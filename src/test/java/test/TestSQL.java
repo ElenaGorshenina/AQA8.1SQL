@@ -10,7 +10,7 @@ public class TestSQL {
 
     @Test
     void successfulAuthTest() {
-        var loginPage = open("http://185.119.57.9:9999", AuthPage.class);
+        var loginPage = open("http://localhost:9999", AuthPage.class);
         var authLogin = SQLUtils.getAuthInfo();
         var authPassword = SQLUtils.getAuthInfo();
         var verificationPage = loginPage.validLogin(authLogin, authPassword);
