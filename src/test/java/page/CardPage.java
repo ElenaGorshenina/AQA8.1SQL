@@ -6,9 +6,9 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CardPage {
-    private SelenideElement headingH1 = $("h1");
+    private SelenideElement headingH2 = $("h2");
 
     public CardPage() {
-        headingH1.shouldBe(Condition.visible);
+        headingH2.shouldBe(Condition.visible);
     }
 }
